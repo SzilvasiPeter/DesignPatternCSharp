@@ -1,5 +1,6 @@
 ﻿using DesignPatternCSharp.Adapter;
 using DesignPatternCSharp.Builder;
+using DesignPatternCSharp.Observer;
 using System;
 
 namespace DesignPatternCSharp
@@ -28,6 +29,20 @@ namespace DesignPatternCSharp
 
             ISeparetor separetor = new PersonAdapter(personAdaptee);
             Console.WriteLine(separetor.Separate());
+            #endregion
+
+            #region Observer
+            Person personSubject = new Person();
+            IObserver downgradeObserver = new DowngradeObserver();
+            IObserver upgradeObserver = new UpgradeObserver();
+            personSubject.Attach(downgradeObserver);
+            personSubject.Attach(upgradeObserver);
+
+            personSubject.HasPremium = true;
+            personSubject.HasPremium = false;
+
+            personSubject.Detach(upgradeObserver);
+            personSubject.HasPremium = true;
             #endregion
         }
     }

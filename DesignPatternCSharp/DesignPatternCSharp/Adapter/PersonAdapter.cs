@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DesignPatternCSharp.Adapter
 {
-    class PersonAdapter : ISeparetor
+    class PersonAdapter : ISeparator
     {
         public PersonAdapter(Person person)
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPatternCSharp.Adapter
 {
-    interface ISeparetor
+    interface ISeparator
     {
         string Separate();
     }

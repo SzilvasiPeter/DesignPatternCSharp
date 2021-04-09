@@ -1,4 +1,5 @@
-﻿using DesignPatternCSharp.Observer;
+﻿using DesignPatternCSharp.Adapter;
+using DesignPatternCSharp.Observer;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -72,15 +73,6 @@ namespace DesignPatternCSharp.Builder
             foreach (var observer in myObservers)
             {
                 observer.Update(this);
-            }
-        }
-
-        public void PremiumIsExpired()
-        {
-            if(HasPremium == true)
-            {
-                HasPremium = false;
-
             }
         }
 

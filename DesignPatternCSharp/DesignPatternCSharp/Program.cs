@@ -11,6 +11,9 @@ namespace DesignPatternCSharp
         {
             #region Builder
 
+            Console.WriteLine("Buillder");
+            Console.WriteLine();
+
             PersonBuilder builder = new PersonBuilder();
             builder.AddName("Peter");
             builder.AddAge(25);
@@ -22,20 +25,28 @@ namespace DesignPatternCSharp
             builder.PremiumOff();
             Person personWithoutPremium = builder.GetPerson();
             Console.WriteLine(personWithoutPremium);
+            Console.WriteLine();
 
             #endregion
 
             #region Adapter
+
+            Console.WriteLine("Adapter");
+            Console.WriteLine();
 
             Person personAdaptee = new Person() { Name = "Peter", Age = 25 };
             Console.WriteLine(personAdaptee.Separate());
 
             ISeparator separetor = new PersonAdapter(personAdaptee);
             Console.WriteLine(separetor.Separate());
+            Console.WriteLine();
 
             #endregion
 
             #region Observer
+
+            Console.WriteLine("Observer");
+            Console.WriteLine();
 
             Person personSubject = new Person();
             IObserver downgradeObserver = new DowngradeObserver();
@@ -48,6 +59,7 @@ namespace DesignPatternCSharp
 
             personSubject.Detach(upgradeObserver);
             personSubject.HasPremium = true;
+            Console.WriteLine();
 
             #endregion
         }

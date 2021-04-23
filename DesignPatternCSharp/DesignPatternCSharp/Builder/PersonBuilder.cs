@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DesignPatternCSharp.Builder
 {
@@ -38,7 +36,9 @@ namespace DesignPatternCSharp.Builder
 
         public Person GetPerson()
         {
-            return myPerson;
+            Person newPerson = myPerson;
+            Reset();
+            return newPerson;
         }
 
         private Person myPerson;

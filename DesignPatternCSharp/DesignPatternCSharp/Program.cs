@@ -1,7 +1,8 @@
-﻿using DesignPatternCSharp.Adapter;
+﻿using System;
+
+using DesignPatternCSharp.Adapter;
 using DesignPatternCSharp.Builder;
 using DesignPatternCSharp.Observer;
-using System;
 
 namespace DesignPatternCSharp
 {
